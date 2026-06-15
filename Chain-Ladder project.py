@@ -30,3 +30,4 @@ claims["accident_period"] = claims["accident_month"].dt.to_period("M")
 claims["paid_period"] = claims["accident_period"] + claims["lag_months"]
 
 print(claims.head(n=10))
+claims.to_csv("triangle-data.csv", index=False)
