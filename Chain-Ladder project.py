@@ -3,7 +3,7 @@ import pandas as pd
 
 np.random.seed(42)  # makes random numbers reproducible
 
-n_claims = 1000
+n_claims = 3000
 
 # Accident month
 accident_month = np.random.choice(
