@@ -3,7 +3,7 @@ import pandas as pd
 
 np.random.seed(42)  # makes random numbers reproducible
 
-n_claims = 3000
+n_claims = 3200
 
 # Accident month
 accident_month = np.random.choice(
@@ -14,7 +14,7 @@ accident_month = np.random.choice(
 # How many months after the accident did the claim get paid?
 # Health claims pay out fast, so most lags are 0 or 1 month
 lag_months = np.random.choice([0, 1, 2, 3, 4, 5], size=n_claims,
-                               p=[0.50, 0.25, 0.12, 0.07, 0.04, 0.02])
+                               p=[0.53, 0.22, 0.12, 0.07, 0.04, 0.02])
 
 # Claim amount (gamma right skewed)
 paid_amount = np.round(np.random.gamma(shape=2, scale=500, size=n_claims), 2)
